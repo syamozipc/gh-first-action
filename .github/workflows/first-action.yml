@@ -1,0 +1,19 @@
+# workflow名
+name: First Workflow
+# トリガー（この場合はマニュアルで起動すると言うこと）
+on: workflow_dispatch
+# 複数のjobで構成する
+jobs:
+  # 1つ目のjob名（任意の名前）
+  first-job:
+    # runnerを指定
+    runs-on: ubuntu-latest
+    # stepを複数指定
+    steps:
+        # 任意の名前
+      - name: Print greeting
+        run: echo "hello world"
+      - name: Print goobye
+        run: echo "goobye world"
+      
+  
